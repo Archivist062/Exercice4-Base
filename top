@@ -1,0 +1,23 @@
+[33mcommit 429a3d79ac36aa08b12daf3b8e9e4d82946d828c[m[33m ([m[1;36mHEAD[m[33m)[m
+Author: Marion Gayon <mariongayon@gmail.com>
+Date:   Tue Jun 14 12:14:15 2022 +0200
+
+    add bad exception error
+
+[33mcommit 5cbd04a8649afd0df638f6131d4fda5d4d7c2bdd[m
+Author: Marion Gayon <mariongayon@gmail.com>
+Date:   Tue Jun 14 10:53:12 2022 +0200
+
+    test valide CreatingAnEmployeeWorks
+
+[33mcommit edfd8917becc878677f607698c8270fe11c2b1fc[m
+Author: Ludovic 'Archivist' Lagouardette <ludovic@nekoit.xyz>
+Date:   Tue Jun 14 09:12:45 2022 +0200
+
+    Ajoutez des fichiers projet.
+
+[33mcommit c8e0d53ec566e1fabd61871bd77817229d78bb32[m
+Author: Ludovic 'Archivist' Lagouardette <ludovic@nekoit.xyz>
+Date:   Tue Jun 14 09:12:42 2022 +0200
+
+    Ajouter .gitattributes, .gitignore et LICENSE.txt
