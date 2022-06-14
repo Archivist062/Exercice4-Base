@@ -14,7 +14,14 @@ namespace Exercice4
 
 		public Customer(string cid, string name)
 		{
-			this.cid = cid;
+			uint i = 0;
+			if (uint.TryParse(cid, out i)) {
+				this.cid = cid;
+			} else {
+				Exception error = new Exception("Le cid n'est pas une string");
+				throw new BadIDException(error);
+			}
+			
 			this.name = name;
 		}
 
@@ -35,7 +42,7 @@ namespace Exercice4
 
 		string IPerson.GetName()
 		{
-			return name; ;
+			return name;
 		}
 
 		void IPrintable.Print(IPrinter printer)

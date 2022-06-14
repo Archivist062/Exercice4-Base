@@ -30,12 +30,12 @@ namespace Exercice4
 
 		string IEmployee.GetEID()
 		{
-			return eid; ;
+			return eid; 
 		}
 
 		string IPerson.GetName()
 		{
-			return name; ;
+			return name;
 		}
 
 		void IPrintable.Print(IPrinter printer)
