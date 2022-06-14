@@ -29,13 +29,13 @@ namespace Exercice4
 			}
 			else
 			{
-				throw new BadIDException("L'eid n'est pas valide");
+				throw new BadIDException("L'eid is not valid.");
 			}
 
 
 			if (name.Length == 0)
 			{
-				throw new BadNameException("Le nom ne doit pas être vide");
+				throw new BadNameException("Name must be completed.");
 			}
 			else
 			{
