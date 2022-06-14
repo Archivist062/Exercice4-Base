@@ -18,10 +18,9 @@ namespace Exercice4
 			if (uint.TryParse(cid, out i)) {
 				this.cid = cid;
 			} else {
-				Exception error = new Exception("Le cid n'est pas une string");
-				throw new BadIDException(error);
+				throw new BadIDException("Le cid n'est pasle bon ID.");
 			}
-			
+
 			this.name = name;
 		}
 
