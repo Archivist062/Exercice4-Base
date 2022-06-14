@@ -8,10 +8,6 @@ namespace Exercice4
 {
 	public class BadIDException : Exception
 	{
-		string errorId;
-
-		public BadIDException(string? message) : base(message) 
-		{ }
 
 	}
 }

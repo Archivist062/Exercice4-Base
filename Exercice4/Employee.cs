@@ -14,33 +14,14 @@ namespace Exercice4
 
 		public Employee(string eid, string name)
 		{
-			bool countainDigit = false;
-			foreach (char c in eid)
+			if (eid.Length != 3 || !eid.All(x => Char.IsLetter(x))) 
 			{
-				if (char.IsDigit(c))
-				{
-					countainDigit = true;
-					break;
-				}
-			}
-			if (countainDigit != true && eid.Length == 3)
-			{
-				this.eid = eid;
-			}
-			else
-			{
-				throw new BadIDException("L'eid is not valid.");
-			}
+				throw new BadIDException();
+			};
 
-
-			if (name.Length == 0)
-			{
-				throw new BadNameException("Name must be completed.");
-			}
-			else
-			{
-				this.name = name;
-			}
+			this.eid = eid;
+			this.name = name;
+			
 		}
 
 		int IComparable<IEmployee>.CompareTo(IEmployee other)
@@ -65,7 +46,7 @@ namespace Exercice4
 
 		void IPrintable.Print(IPrinter printer)
 		{
-			throw new NotImplementedException();
+			printer.PrintLine("[" + eid +"] " + name);
 		}
 	}
 }

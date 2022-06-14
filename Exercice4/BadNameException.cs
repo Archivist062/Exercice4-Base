@@ -8,10 +8,5 @@ namespace Exercice4
 {
 	public class BadNameException : Exception
 	{
-		string errorName;
-
-		public BadNameException(string? message) : base(message) 
-		{ 
-		}
 	}
 }

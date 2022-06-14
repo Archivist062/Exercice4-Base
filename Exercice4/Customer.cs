@@ -14,13 +14,17 @@ namespace Exercice4
 
 		public Customer(string cid, string name)
 		{
-			uint i = 0;
-			if (uint.TryParse(cid, out i)) {
-				this.cid = cid;
-			} else {
-				throw new BadIDException("Cid is not valid.");
+			if (cid.Length == 0 || !cid.All(x => Char.IsDigit(x)))
+			{
+				throw new BadIDException();
 			}
 
+			if (name.Length == 0)
+            {
+				throw new BadNameException();
+            }
+
+			this.cid = cid;
 			this.name = name;
 		}
 
@@ -46,7 +50,7 @@ namespace Exercice4
 
 		void IPrintable.Print(IPrinter printer)
 		{
-			throw new NotImplementedException();
+			printer.PrintLine("[" + cid +"] " + name );
 		}
 	}
 }
