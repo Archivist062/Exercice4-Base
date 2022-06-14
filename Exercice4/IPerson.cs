@@ -9,5 +9,6 @@ namespace Exercice4
 	public interface IPerson : IPrintable
 	{
 		string GetName();
+
 	}
 }

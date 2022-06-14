@@ -8,9 +8,21 @@ namespace Exercice4
 {
 	public class Customer : ICustomer
 	{
+
+		public string cid;
+		public string name;
+
 		public Customer(string cid, string name)
 		{
-			throw new NotImplementedException();
+			uint i = 0;
+			if (uint.TryParse(cid, out i)) {
+				this.cid = cid;
+			} else {
+				Exception error = new Exception("Le cid n'est pas une string");
+				throw new BadIDException(error);
+			}
+			
+			this.name = name;
 		}
 
 		int IComparable<ICustomer>.CompareTo(ICustomer other)
@@ -25,12 +37,12 @@ namespace Exercice4
 
 		string ICustomer.GetCID()
 		{
-			throw new NotImplementedException();
+			return cid;
 		}
 
 		string IPerson.GetName()
 		{
-			throw new NotImplementedException();
+			return name;
 		}
 
 		void IPrintable.Print(IPrinter printer)

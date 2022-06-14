@@ -8,6 +8,11 @@ namespace Exercice4
 {
 	public class BadIDException : Exception
 	{
+		string error;
+
+		public BadIDException(Exception error) { 
+			this.error = error.Message;
+		}
 
 	}
 }

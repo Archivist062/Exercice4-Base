@@ -12,6 +12,8 @@ namespace Exercice4
 		/// Obtains the EID of the employee
 		/// </summary>
 		/// <returns>a 3 letter ID for an employee</returns>
+		/// 
+
 		string GetEID();
 	}
 }

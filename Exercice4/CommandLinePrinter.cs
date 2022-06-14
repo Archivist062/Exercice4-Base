@@ -8,6 +8,12 @@ namespace Exercice4
 {
 	internal class CommandLinePrinter : IPrinter
 	{
+	
+
+		public CommandLinePrinter() 
+		{
+		}
+
 		void IPrinter.PrintLine(string str)
 		{
 			throw new NotImplementedException();
