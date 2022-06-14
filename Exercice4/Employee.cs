@@ -8,9 +8,14 @@ namespace Exercice4
 {
 	public class Employee : IEmployee
 	{
+
+		public string eid;
+		public string name;
+
 		public Employee(string eid, string name)
 		{
-			throw new NotImplementedException();
+			this.eid = eid;
+			this.name = name;
 		}
 
 		int IComparable<IEmployee>.CompareTo(IEmployee other)
@@ -25,12 +30,12 @@ namespace Exercice4
 
 		string IEmployee.GetEID()
 		{
-			throw new NotImplementedException();
+			return eid; ;
 		}
 
 		string IPerson.GetName()
 		{
-			throw new NotImplementedException();
+			return name; ;
 		}
 
 		void IPrintable.Print(IPrinter printer)
